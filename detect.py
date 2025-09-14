@@ -3,7 +3,7 @@ import os
 from ultralytics import YOLO
 from pathlib import Path
 
-def detect_damage(image_path, model_path='weights/best.pt'):
+def detect_damage(image_path, model_path='best.pt'):
     """
     Запускает модель YOLOv8 для детекции повреждений на изображении.
 
@@ -33,7 +33,7 @@ def detect_damage(image_path, model_path='weights/best.pt'):
 
     # Получаем путь к сохраненному файлу
     output_path = Path(f"results/detection/{Path(image_path).name}")
-    print(f"✅ Готово! Результат сохранен в файл: {output_path.resolve()}")
+    print(f"Результат сохранен в файл: {output_path.resolve()}")
 
 if __name__ == '__main__':
     # Создаем парсер для аргументов командной строки
